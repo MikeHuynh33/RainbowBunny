@@ -1,0 +1,590 @@
+body{
+    margin: auto;
+}
+/*-----Background Container-----*/
+.background_display{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    object-fit: contain;
+}
+/*-----Bunny Background images-----*/
+.bunny_background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 58.5em;
+    height: 40.25em;
+    position: absolute;
+    background-image: url("./images/Heaven.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/*-----Head of Bunny-----*/
+.bunny_head{
+    position: relative;
+    content: "";
+    background-color: whitesmoke;
+    border:5px solid black;
+    width: 21em;
+    height: 15em;
+    border-radius: 50% 50% 50% 50% / 51% 51% 46% 46%;
+    transform: translate(0,.5em);
+    z-index: 1;
+    box-shadow: -2px 10px 8px black;
+ 
+}
+/*-----Head of Bunny On Right HandSide-----*/
+.bunny_head_eyeright{
+    position: absolute;
+    background-color: black;
+    height: 2.3em;
+    width: 1.2em;
+    left: 30%;
+    top: 30%;
+    border-radius: 50%;
+    transform: rotate(180deg);
+}
+.bunny_evil_eyeright {
+    display: none;
+    position: absolute;
+    background-color: rgb(2, 2, 2);
+    height: 1.5em;
+    width: 1.5em;
+    left: 30%;
+    top: 34%;
+    border-radius: 50%;
+    transform: rotate(180deg);
+}
+
+.bunny_evil_eyeright::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(3, 3, 3);
+    height: 1.3em;
+    width: 1.5em;
+    left: 60%;
+    top: 0;
+    transform: rotate(180deg);
+    border-radius:100% 0 0 100% / 50%;
+}
+
+.bunny_evil_eyeright::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(3, 3, 3);
+    height: 3em;
+    width: 0.7em;
+    left: 70%;
+    top: 24%;
+    transform: rotate(130deg);
+    border-radius: 0 100% 0 0;
+}
+.bunny_head_eyebrowright{
+    position: absolute;
+    background-color: black;
+    height: 0.5em;
+    width: 2.2em;
+    left: 27%;
+    top: 20%;
+    border-radius: 35%;
+    transform: rotate(35deg);
+}
+.bunny_head_makeupright{
+    position: absolute;
+    background-color: rgb(218, 85, 138);
+    height: 1.3em;
+    width: 2.3em;
+    left: 15%;
+    top: 55%;
+    border-radius: 35px;
+}
+
+/*-----Head of Bunny On Left HandSide-----*/
+.bunny_head_eyeleft{
+   
+    position: absolute;
+    background-color: black;
+    height: 2.3em;
+    width: 1.2em;
+    left: 66%;
+    top: 30%;
+    border-radius: 50%;
+    transform: rotate(180deg);  
+}
+.bunny_evil_eyeleft {
+    display: none;
+    position: absolute;
+    background-color: rgb(2, 2, 2);
+    height: 1.5em;
+    width: 1.5em;
+    left: 66%;
+    top: 34%;
+    border-radius: 50%;
+    transform: rotate(180deg);
+}
+.bunny_evil_eyeleft::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(3, 3, 3);
+    height: 1.3em;
+    width: 1.5em;
+    left: -60%;
+    top: 0%;
+    border-radius: 100% 0 0 100% / 50%;
+}
+.bunny_evil_eyeleft::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(3, 3, 3);
+    height: 3em;
+    width: 0.7em;
+    left: -14%;
+    top: 20%;
+    transform: rotate(-130deg);
+    border-radius: 100% 0 0 0;
+}
+.bunny_head_eyebrowleft {
+    position: absolute;
+    background-color: black;
+    height: 0.5em;
+    width: 2.2em;
+    left: 64.5%;
+    top: 20%;
+    border-radius: 35%;
+    transform: rotate(-35deg);
+}
+.bunny_head_makeupleft{
+    position: absolute;
+    background-color: rgb(218, 85, 138);
+    height: 1.3em;
+    width: 2.3em;
+    left: 77%;
+    top: 55%;
+    border-radius: 35px;
+}
+/*---Bunny Horn---*/
+.bunny_head_hornright{
+    display: none;
+    position: absolute;
+        height: 4em;
+        width: 1.2em;
+        left: 70%;
+        top: -5%;
+        background-color: rgb(92, 64, 51);
+        border-radius: 0 100% 0 0;
+        transform: rotate(50deg);
+        border: 5px solid black;
+}
+.bunny_head_hornright::before {
+    content: "";
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    left: -60%;
+    top: 68%;
+    text-align: center;
+    background-color: rgb(92, 64, 51);
+    border-radius: 50%;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+}
+.bunny_head_hornright::after{
+    content: "E";
+    position: absolute;
+    left: -43%;
+    top: 1%;
+    font-size: 2.9em;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+}
+
+.bunny_head_hornleft {
+    display: none;
+    position: absolute;
+    height: 4em;
+    width: 1.2em;
+    left: 24%;
+    top: -5%;
+    background-color: rgb(92, 64, 51);
+    border-radius: 100% 0 0 0;
+    transform: rotate(-50deg);
+    border: 5px solid black;
+}
+
+.bunny_head_hornleft::before {
+    content: "";
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    left: -60%;
+    top: 68%;
+    text-align: center;
+    background-color: rgb(92, 64, 51);
+    border-radius: 50%;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+}
+
+.bunny_head_hornleft::after {
+    content: "E";
+    position: absolute;
+    left: -13%;
+    top: 13%;
+    font-size: 2.9em;
+    font-weight: 600;
+    transform: rotate(-180deg);
+    font-family: 'Barlow', sans-serif;
+}
+/*-----Body of Bunny-----*/
+.bunny_body{
+    position: relative;
+    width: 10em;
+    border-bottom: 200px solid whitesmoke;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    transform: translate(0, -1em);
+    z-index: 1;
+}
+/*Bunny Earns*/
+.bunny_head_earright {
+    position: absolute;
+    height: 14em;
+    width: 7em;
+    background-color: whitesmoke;
+    transform: rotate(-145deg);
+    border: 5px solid black;
+    left: 24%;
+    top: 39%;
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    border-top: 10px solid black;
+}
+.bunny_head_earleft {
+    position: absolute;
+    height: 14em;
+    width: 7em;
+    background-color: whitesmoke;
+    transform: rotate(145deg);
+    border: 5px solid black;
+    left: 63%;
+    top: 39%;
+    border-top: 10px solid black;
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    
+}
+/*Hand Shape*/
+.hand-shape{
+    position: absolute;
+    width: 303px;
+    height: 100px;
+    border-radius: 100px / 60px;
+    border: 5px solid black;
+    transform: translate(0,4em);
+    z-index: 0;
+}
+.hand-shape::after {
+    position: absolute;
+    content: "";
+    width: 260px;
+    height: 60px;
+    border: 22px solid whitesmoke;
+    border-radius: 100px / 60px;
+    
+    transform: translate(0em, -0.1em);
+}
+.hand-shape::before {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 55px;
+    border-radius: 100px / 40px;
+    border: 8px solid black;
+    transform: translate(1.2em, 0.9em);
+}
+/*---Bunny Crown----*/
+@keyframes float-angel-crown {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translate(0.2em, -16.5em);
+    }
+   
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translate(0.2em, -17.3em);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translate(0.2em, -16.5em);
+    }
+}
+@keyframes float-demon-crown {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translate(0.2em, -15em);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translate(0.2em, -16em);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translate(0.2em, -15em);
+    }
+}
+.angel-crown-shape {
+    position: absolute;
+    width: 175px;
+    height: 75px;
+    border-radius: 100px / 50px;
+    border: 5px solid black;
+    animation: float-angel-crown 6s ease-in-out infinite;
+    z-index: 0;
+}
+.angel-crown-shape::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 50px;
+    border-radius: 100px / 50px;
+    border: 12px solid rgb(253, 226, 19);
+    transform: translate(0em, 0);
+}
+.angel-crown-shape::before {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 40px;
+    border-radius: 100px / 50px;
+    border: 5px solid black;
+    transform: translate(.8em, 0.8em);
+}
+.demon-crown-shape{
+    display: none;
+    position: relative;
+    width: 40px;
+    box-sizing: content-box;
+    border-width: 35px 8px 0;
+    border-style: solid;
+    border-color: #f80808 transparent;
+    animation: float-demon-crown 6s ease-in-out infinite;
+    transform: translate(0.2em, -15em);
+    z-index: 0;
+}
+.demon-crown-shape::before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -90px;
+    left: -7px;
+    border-width: 10px 27px 45px;
+    border-style: solid;
+    border-color: transparent transparent #f80808;
+}
+.demon-crown-shape::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 9px;
+    background-color: #FFCF00;
+}
+.demon-column{
+    width: 20px;
+    position: absolute;
+    height: 0;
+    top: -57px;
+    left: 25px;
+    border-bottom: 50px solid red;
+    border-right: 50px solid transparent;
+    transform: rotate(-80deg);
+}
+.demon-column::before {
+    width: 20px;
+    content: "";
+    position: absolute;
+    height: 0;
+    top: -79px;
+    left: -14px;
+    border-bottom: 50px solid red;
+    border-left: 50px solid transparent;
+    transform: rotate(160deg);
+    
+}
+/*Bunny Legs*/
+.bunny_leg_right{
+    position: absolute;
+    top: 82.1%;
+    left: 38.4%;
+    height: 40px;
+    width: 20px;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border:5px solid black;
+    border-top: 0;
+}
+.bunny_leg_left {
+    position: absolute;
+    top: 82.1%;
+    left: 58.4%;
+    height: 40px;
+    width: 20px;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border: 5px solid black;
+    border-top: 0;
+}
+/*Bunny Skin on body*/
+.bottom{
+    position: absolute;
+    height: 5px;
+    width: 188px;
+    background-color: black;
+    left: 41.5%;
+    top: 82.4%;
+}
+.right {
+    position: absolute;
+    height: 200px;
+    width: 5px;
+    background-color: black;
+    left: 39.6%;
+    top: 52%;
+    transform: rotate(7.1deg);
+    z-index: 1;
+}
+.left {
+    position: absolute;
+    height: 200px;
+    width: 5px;
+    background-color: black;
+    left: 59.8%;
+    top: 52%;
+    transform: rotate(-7deg);
+    z-index: 1;
+}
+/*Light*/
+.bunny_light{
+    display: flex;
+    position: absolute;
+    top:0;
+    left: -20;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.myAnimationClass {
+    animation: myAnimation 2s forwards;
+}
+@keyframes myAnimation {
+    0% {
+        opacity: 1;
+    }
+     25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+        }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Table containe Button "SEND" */
+.table_btn{
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 5em;
+    height: 5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+    padding: 5px;
+    display: inline-block;
+    border-radius: 7px;
+}
+button span{
+        display: inline-block;
+        background: #191919;
+        color: white;
+        text-transform: uppercase;
+        padding: 8px 13px;
+        border-radius:5px;
+        font-weight: 800;
+        font-size: 1rem;
+}
+.light-blind{
+    background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+    background-repeat: no-repeat;
+    min-width: 936px;
+    height: 0px;
+    opacity: 1;
+    z-index: 1;
+}
+@keyframes lightAnimation {
+    0% {
+        height: 0;
+    }
+    10% {
+        height: 64.4px;
+        
+    }
+    20% {
+        height: 128.8.4px;
+    }
+    30% {
+        height: 193.2px;
+    }
+    40% {
+        height: 257.6px;
+    }
+    50% {
+        height: 322px;
+        
+    }
+    60% {
+        height: 386.4px;
+    }
+    70% {
+        height: 450.8px;
+    }
+    80% {
+        height: 515.2px;
+    }
+    90% {
+        height: 579.6px;
+    }
+    100% {
+        height: 624.6px;
+    }
+}
+
+
